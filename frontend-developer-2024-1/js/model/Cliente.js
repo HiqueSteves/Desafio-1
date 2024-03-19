@@ -3,14 +3,14 @@ class Cliente {
         obj = obj || {}// Isso é um tratamento para evitar undefined quando tentar acessar alguma propriedade.
         this.id = obj.id;
         this.nome = obj.nome;
-        this.cpfOuCnpj = obj.cpfOuCnpj;
-        this.email = obj.email;
-        this.telefone = obj.telefone;
+        this.valor = obj.valor;
+        this.quantidadeEstoque = obj.quantidadeEstoque;
+        this.observacao = obj.observacao;
         this.dataCadastro = obj.dataCadastro;
     }
 
     validar(){
-        // return (!this.cpfOuCnpj || !this.email) ? false  : true;  
-        return !!(this.cpfOuCnpj && this.email);  
+        // return (!this.valor || !this.quantidadeEstoque) ? false  : true;  
+        return !!(this.valor && this.quantidadeEstoque);  
     }
 }
